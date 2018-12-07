@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <style>
+            body{
+                margin: 0;
+            }
+            #canvas{
+                border: 1px solid black;
+                margin-left: calc(50% - 480px);
+            }
+
+            /* img{
+                display: none;
+            } */
+        </style>
+
+    </head>
+    <body>
+        <div style="display: none">
+            <img id="grass" src="assets/img/grass.jpg"/>
+            <img id="wall" src="assets/img/wall.jpg"/>
+            <img id="monster" src="assets/img/monster.jpg"/>
+            <img id="player" src="assets/img/player.jpg"/>
+            <img id="tree" src="assets/img/tree.jpg"/>
+            <img id="posion" src="assets/img/posion.jpg"/>
+        </div>
+        
+        <canvas id="canvas" height="960px" width="960px"></canvas>
+        
+        <script>
+            var canvas=document.getElementById('canvas');
+            var context=canvas.getContext('2d');
+        </script>
+        
+        <script src="assets/js/arena-data.js"></script>
+        <script src="assets/js/monster.js"></script>
+        <script src="assets/js/player.js"></script>
+        <script src="assets/js/manage-arena.js"></script>
+        <script>
+            var height = window.innerHeight - 10;
+            document.body.style.zoom = (height/960);
+        </script>
+    </body>
+</html>
